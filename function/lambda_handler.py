@@ -1,4 +1,5 @@
 import json
+
 # import requests
 
 
@@ -24,5 +25,6 @@ def lambda_function(event, context):
     """
 
     return {
-        "statusCode": True
+        "statusCode": True,
+        "event": event,
     }

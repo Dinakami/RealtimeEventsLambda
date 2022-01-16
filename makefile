@@ -5,6 +5,10 @@ deploy:
 	make build
 	sam deploy --guided
 
+test-event:
+	make build
+	sam local invoke "EventCoordinatorLambda" --event events/event.json --region us-east-2 > output.txt
+
 initiate-setup:
 	make setup-pre-commit
 	make install-req
