@@ -6,7 +6,7 @@ Description: >
   All events are sent to this Lambda for Processing
 
 Resources:
-  EventCoordinatorLambda:
+  Event-Coordinator-Lambda:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: function/
