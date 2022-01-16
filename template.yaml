@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  event-coordinator-lambda
+
+  All events are sent to this Lambda for Processing
+
+Resources:
+  EventCoordinatorLambda:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: function/
+      Handler: lambda_handler.lambda_function
+      Runtime: python3.8
+      Timeout: 70
